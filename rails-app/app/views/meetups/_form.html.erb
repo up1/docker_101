@@ -1,0 +1,21 @@
+<%= form_for(@meetup) do |f| %>
+  <% if @meetup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meetup.errors.count, "error") %> prohibited this meetup from being saved:</h2>
+
+      <ul>
+      <% @meetup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
