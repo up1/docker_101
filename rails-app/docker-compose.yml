@@ -4,9 +4,9 @@ db:
 web:
   build: .
   ports: 
-    - '3000:3000'
+    - "3000:3000"
   volumes:
-    - './:/var/app'
+    - "./:/var/app"
   working_dir: /var/app
   command: rails s -b '0.0.0.0'
   links:

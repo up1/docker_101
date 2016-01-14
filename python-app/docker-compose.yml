@@ -7,7 +7,7 @@ web:
   ports:
    - "5000:5000"
   volumes:
-   - ./web:/var/www
+   - "./web:/var/www"
   working_dir: /var/www
   links:
    - redis

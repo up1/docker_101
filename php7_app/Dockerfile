@@ -1,3 +1,3 @@
 FROM php:latest
-ADD app /app
+ADD app /var/www
 EXPOSE 8000
