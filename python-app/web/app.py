@@ -7,7 +7,9 @@ redis = Redis(host='redis', port=6379)
 @app.route('/')
 def hello():
     redis.incr('hits')
-    return 'Hello World! I have been seen %s times.' % redis.get('hits')
+    hello = 'Hello World from Docker Bangkok Meetup!<br>'
+    message = ' I have been seen %s times.' % redis.get('hits')
+    return  hello + message
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
