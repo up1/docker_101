@@ -1,0 +1,13 @@
+redis:
+  image: redis
+
+web:
+  build: web
+  command: python app.py
+  ports:
+   - "5000:5000"
+  volumes:
+   - ./web:/var/www
+  working_dir: /var/www
+  links:
+   - redis
